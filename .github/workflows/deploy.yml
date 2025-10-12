@@ -1,4 +1,5 @@
 name: Deploy site
+# Automatically deploy to GitHub Pages
 
 on:
   push:
