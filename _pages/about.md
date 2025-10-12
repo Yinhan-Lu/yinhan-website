@@ -27,7 +27,7 @@ latest_posts:
 
 Hi! I'm **Yinhan Lu**, an undergraduate student at McGill University pursuing a B.Sc. in Computer Science (Honour Program). 
 
-I am currently working with several research groups, including [Mila - Quebec AI Institute](https://mila.quebec/en/), where I explore topics ranging from language model architectures to AI-assisted design systems. My research interests lie at the intersection of deep learning, natural language understanding, and human-AI interaction.
+
 
 My research interests include:
 - Embodied AI, LLM-based Agent
