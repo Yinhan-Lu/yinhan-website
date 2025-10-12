@@ -11,3 +11,21 @@ assets/libs/
 node_modules/
 vendor
 .idea
+
+# Sensitive/Personal files
+# Only allow CV in assets/pdf/ directory
+/*.pdf
+transcript*.pdf
+*_transcript.pdf
+resume*.json.bak
+*.bak
+
+# Allow CV in the correct location
+!assets/pdf/*.pdf
+
+# Temporary scripts and notes
+deploy-manual.sh
+preview-local.sh
+*_CHANGES.md
+CUSTOMIZATION_GUIDE.md
+HOW_TO_UPDATE.md

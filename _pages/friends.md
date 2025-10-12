@@ -11,9 +11,10 @@ Here are some amazing people I've had the pleasure of learning and working with:
 
 ---
 
-### [Mathew He](https://mattyizhenghe.github.io/)
-McGill CogSci undergrad, currently doing Computational Neuroscience and NeuroAI in [Paul Masset](https://massetlab.org/)'s lab.
+#### [Mathew He](https://mattyizhenghe.github.io/)
 
+
+#### [Michael Y. Yu](https://michaelyya.github.io/)
 
 
 ---
