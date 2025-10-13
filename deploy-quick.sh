@@ -102,6 +102,39 @@ git push origin main
 echo ""
 echo "✅ Successfully pushed to GitHub!"
 echo ""
+
+# Check if _config.yml was modified - if so, offer to restart Jekyll
+if git diff HEAD~1 HEAD --name-only | grep -q "_config.yml"; then
+    echo "⚠️  _config.yml was modified. Jekyll needs to be restarted to see changes."
+    echo ""
+    read -p "Restart local Jekyll server? (y/n) " -n 1 -r
+    echo ""
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        echo "🔄 Restarting Jekyll server..."
+
+        # Find and kill Jekyll processes
+        JEKYLL_PIDS=$(pgrep -f "jekyll serve")
+        if [ -n "$JEKYLL_PIDS" ]; then
+            echo "Stopping existing Jekyll server(s)..."
+            pkill -f "jekyll serve"
+            sleep 2
+        fi
+
+        # Start Jekyll in background
+        echo "Starting Jekyll server on port 4001..."
+        export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+        export LANG=en_US.UTF-8
+        export LC_ALL=en_US.UTF-8
+        nohup bundle exec jekyll serve --host 0.0.0.0 --port 4001 > jekyll.log 2>&1 &
+
+        sleep 3
+        echo "✅ Jekyll server restarted!"
+        echo "🌐 Local preview: http://localhost:4001"
+        echo "📋 Server log: jekyll.log"
+        echo ""
+    fi
+fi
+
 echo "🔄 GitHub Actions is now building and deploying your site..."
 echo "📊 Check progress: https://github.com/$(git remote get-url origin | sed 's/.*github.com[:/]\(.*\)\.git/\1/')/actions"
 echo ""
