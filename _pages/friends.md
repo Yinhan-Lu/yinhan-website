@@ -11,7 +11,7 @@ Here are some amazing people I've had the pleasure of learning and working with:
 
 ---
 
-#### [Mathew He](https://mattyizhenghe.github.io/)
+#### [Matthew Y. He](https://mattyizhenghe.github.io/)
 
 
 #### [Michael Y. Yu](https://michaelyya.github.io/)

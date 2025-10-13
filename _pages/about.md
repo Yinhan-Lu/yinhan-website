@@ -2,32 +2,25 @@
 layout: about
 title: about
 permalink: /
+subtitle: McGill University, [Mila - Quebec AI Institute](https://mila.quebec/en/). Montreal, QC, Canada. yinhan.lu at mail.mcgill.ca
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>yinhan.lu at mail.mcgill.ca</p>
-    <p>McGill University</p>
-    <p>Montreal, QC, Canada</p>
+    <p>Taken at Mont-Tremblant, Quebec</p>
 
 social: true # includes social icons at the bottom of the page
 
-announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
 
-latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi! I'm **Yinhan Lu**, an undergraduate student at McGill University pursuing a B.Sc. in Computer Science (Honour Program). 
+Hi! I'm **Yinhan Lu**, an undergraduate student at McGill University pursuing a B.Sc. in Computer Science (Honour Program).
 
 
+
+I have been fortunate to work with several research groups and amazing mentors. Currently, I am working at [Mila - Quebec AI Institute](https://mila.quebec/en/) with [Prof. David Adelani](https://dadelani.github.io/)  on low-resource NLP. I am also working on [Prof. Bang Liu](https://www-labs.iro.umontreal.ca/~liubang/)'s group on LLM-based agents, mentored by [Haochen Shi](https://scholar.google.com/citations?user=PqODQVwAAAAJ&hl=zh-CN). Previously, I worked with [Prof. Mike Chen](http://mikechen.com/) at [National Taiwan University's HCI Lab](https://ntuhci.org/).
 
 My research interests include:
 - Embodied AI, LLM-based Agent
@@ -37,10 +30,12 @@ My research interests include:
 
 ---
 
-*Actively seeking thesis-based Master's opportunities for Fall 2026 in AI/NLP/ML.*
+<p style="text-align: center; font-size: 1.2em; font-style: italic; margin: 1.5em 0;">
+Actively seeking thesis-based Master's opportunities for Fall 2026 in Computer Science.
+</p>
 
 ---
 
 ## Contact
 
-Feel free to reach out via email at [yinhan.lu at mail.mcgill.ca](mailto:yinhan.lu@mail.mcgill.ca). I'm always interested in discussing research collaborations and new opportunities!
+Feel free to reach out via email. I'm always interested in discussing research collaborations and new opportunities!
