@@ -23,7 +23,7 @@
       year: Aug 2025 - Present
       advisor: "Supervisor: David Adelani"
       description:
-        - "Developing computational methods for digitizing low-resource African language dictionaries and incorporating structured lexical knowledge into machine translation systems."
+        - "Working on enhancing translation in low resources language without enough parallel corpus."
 
     - title: Researcher
       institution: McGill AI Society Research Incubator, Montreal, QC
@@ -43,7 +43,7 @@
       year: Jun 2024 - Aug 2024
       advisor: "Supervisor: Mike Chen | Mentor: Wei-Chung Su & Shun-Yu Wang"
       description:
-        - "Contributed to <a href='https://www.roomdreaming.com/zh-TW/'><strong>RoomDreaming</strong></a>, an AI-assisted iterative design system"
+        - "Contributed to <a href='https://www.roomdreaming.com/zh-TW/'><strong>RoomDreaming</strong></a>, an AI-assisted iterative design system."
 
 - title: Courses
   type: nested_list
