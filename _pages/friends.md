@@ -19,6 +19,8 @@ Here are some amazing people I've had the pleasure of learning and working with:
 
 #### [Dekun Wu](https://scholar.google.com/citations?user=d_HqKQIAAAAJ&hl=en)
 
+#### [Anson Ng](https://www.linkedin.com/in/yik-yu-ng-7847b62a7?originalSubdomain=ca)
+
 
 
 
