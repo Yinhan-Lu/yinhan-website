@@ -30,12 +30,6 @@ My research interests include:
 
 ---
 
-<p style="text-align: center; font-size: 1.2em; font-style: italic; margin: 1.5em 0;">
-Actively seeking thesis-based Master's opportunities for Fall 2026 in Computer Science.
-</p>
-
----
-
 ## Contact
 
 Feel free to reach out via email. I'm always interested in discussing research collaborations and new opportunities!

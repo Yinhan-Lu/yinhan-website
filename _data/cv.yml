@@ -2,11 +2,10 @@
 - title: Education
   type: time_table
   contents:
-    - title: Bachelor of Science, Honour Computer Science
+    - title: Bachelor of Science, Computer Science
       institution: McGill University, Montreal, Quebec
       year: 2023-2026(Expected)
       description:
-        - "GPA: <strong>3.93/4.00</strong> | Computer Science Courses: <strong>4.00/4.00</strong>"
         - "<strong>Dean's Honour List</strong> (2024-2025)"
 - title: Experience
   type: time_table
@@ -44,50 +43,6 @@
       advisor: "Supervisor: Mike Chen | Mentor: Wei-Chung Su & Shun-Yu Wang"
       description:
         - "Contributed to <a href='https://www.roomdreaming.com/zh-TW/'><strong>RoomDreaming</strong></a>, an AI-assisted iterative design system."
-
-- title: Courses
-  type: nested_list
-  contents:
-    - title: Graduate Courses (500-level)
-      items:
-        - "<strong>COMP 551</strong>: Applied Machine Learning"
-        - "<strong>COMP 549</strong>: Brain-Inspired AI"
-        - "<strong>COMP 579</strong>: Reinforcement Learning"
-        - "<strong>COMP 545</strong>: Natural Language Understanding with Deep Learning"
-        - "<strong>COMP 520</strong>: Compiler Design <em>(Expected)</em>"
-
-    - title: Undergraduate Computer Science
-      items:
-        - "<strong>COMP 202</strong>: Foundations of Programming"
-        - "<strong>COMP 206</strong>: Introduction to Software Systems"
-        - "<strong>COMP 250</strong>: Introduction to Computer Science"
-        - "<strong>COMP 252</strong>: Honours Algorithms & Data Structures"
-        - "<strong>COMP 273</strong>: Introduction to Computer Systems"
-        - "<strong>COMP 302</strong>: Programming Languages & Paradigms"
-        - "<strong>COMP 303</strong>: Software Design <em>(Expected)</em>"
-        - "<strong>COMP 308</strong>: Computer Systems Lab <em>(Expected)</em>"
-        - "<strong>COMP 310</strong>: Operating Systems"
-        - "<strong>COMP 330</strong>: Theory of Computation <em>(Expected)</em>"
-        - "<strong>COMP 350</strong>: Numerical Computing"
-        - "<strong>COMP 360</strong>: Algorithm Design <em>(Expected)</em>"
-        - "<strong>COMP 400</strong>: Project in Computer Science"
-
-    - title: Mathematics
-      items:
-        - "<strong>MATH 133</strong>: Linear Algebra and Geometry"
-        - "<strong>MATH 140</strong>: Calculus 1"
-        - "<strong>MATH 141</strong>: Calculus 2"
-        - "<strong>MATH 208</strong>: Introduction to Statistical Computing"
-        - "<strong>MATH 222</strong>: Calculus 3"
-        - "<strong>MATH 240</strong>: Discrete Structures"
-        - "<strong>MATH 247</strong>: Honours Applied Linear Algebra"
-        - "<strong>MATH 323</strong>: Probability"
-        - "<strong>MATH 324</strong>: Statistics"
-        - "<strong>MATH 340</strong>: Discrete Mathematics"
-
-    - title: Other
-      items:
-        - "<strong>BIOL 112</strong>: Cell and Molecular Biology <em>(Expected)</em>"
 
 - title: Technical Skills
   type: nested_list
