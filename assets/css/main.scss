@@ -23,3 +23,44 @@ $max-content-width: {{ site.max_width }};
   "tabler-icons/tabler-icons-filled.scss",
   "tabler-icons/tabler-icons-outline.scss"
 ;
+
+/*******************************************************************************
+ * Institution link colors
+ *
+ * Every other link takes --global-theme-color. Each institution keeps its own
+ * color instead, and is bold so the three read as a set: Mila purple,
+ * Universite de Montreal blue, McGill red. The values come from
+ * --global-mila-color, --global-udem-color and --global-mcgill-color in
+ * _themes.scss, following the same per-theme variable pattern the rest of the
+ * theme uses.
+ ******************************************************************************/
+
+a.mila-link,
+a.udem-link,
+a.mcgill-link {
+  font-weight: bold;
+}
+
+a.mila-link {
+  color: var(--global-mila-color);
+
+  &:hover {
+    color: var(--global-mila-color);
+  }
+}
+
+a.udem-link {
+  color: var(--global-udem-color);
+
+  &:hover {
+    color: var(--global-udem-color);
+  }
+}
+
+a.mcgill-link {
+  color: var(--global-mcgill-color);
+
+  &:hover {
+    color: var(--global-mcgill-color);
+  }
+}

@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: McGill University, [Mila - Quebec AI Institute](https://mila.quebec/en/). Montreal, QC, Canada. yinhan.lu at mail.mcgill.ca
+subtitle: <a href="https://mila.quebec/en/" class="mila-link">Mila - Quebec AI Institute</a>. Montreal, QC, Canada.
 
 profile:
   align: right
@@ -16,20 +16,12 @@ social: true # includes social icons at the bottom of the page
 
 ---
 
-Hi! I'm **Yinhan Lu**, an undergraduate student at McGill University pursuing a B.Sc. in Computer Science (Honour Program).
+Hi! I'm **Yinhan Lu**. I am a research-based Master's student in artificial intelligence at <a href="https://mila.quebec/en/" class="mila-link">Mila</a>, affiliated with <a href="https://www.umontreal.ca/" class="udem-link">Université de Montréal</a>, supervised by [Bang Liu](https://www-labs.iro.umontreal.ca/~liubang/) and [David Adelani](https://dadelani.github.io/). Previously, I got my BSc in Computer Science from <a href="https://www.mcgill.ca/" class="mcgill-link">McGill</a> and have been doing research at <a href="https://mila.quebec/en/" class="mila-link">Mila</a> since then.
 
-
-
-I have been fortunate to work with several research groups and amazing mentors. Currently, I am working at [Mila - Quebec AI Institute](https://mila.quebec/en/) with [Prof. David Adelani](https://dadelani.github.io/)  on low-resource NLP. I am also working on [Prof. Bang Liu](https://www-labs.iro.umontreal.ca/~liubang/)'s group on LLM-based agents, mentored by [Haochen Shi](https://scholar.google.com/citations?user=PqODQVwAAAAJ&hl=zh-CN). Previously, I worked with [Prof. Mike Chen](http://mikechen.com/) at [National Taiwan University's HCI Lab](https://ntuhci.org/).
-
-My research interests include:
-- Embodied AI, LLM-based Agent
-- Multilingual NLP, Low-resource Languages
-- Human Computer Interaction
-- Sequence Modeling and Generative Modeling
+I'm interested in multilingual NLP, agentic AI, and sequence modeling.
 
 ---
 
 ## Contact
 
-Feel free to reach out via email. I'm always interested in discussing research collaborations and new opportunities!
+firstname.lastname at {mail.mcgill.ca, mila.quebec}
