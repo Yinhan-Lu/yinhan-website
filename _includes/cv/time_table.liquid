@@ -2,110 +2,85 @@
   {% for content in entry.contents %}
     <li class="list-group-item">
       <div class="row">
-        {% if content.year %}
-          <div class="col-xs-2 cl-sm-2 col-md-2 text-center" style="width: 75px">
-            <table class="table-cv">
-              <tbody>
-                <tr>
-                  <td>
-                    <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">
-                      {{- content.year -}}
-                    </span>
-                  </td>
-                </tr>
-                {% if content.location %}
-                  <tr>
-                    <td>
-                      <p class="location">
-                        <i class="fa-solid fa-location-dot iconlocation"></i>
-                        {{ content.location }}
-                      </p>
-                    </td>
-                  </tr>
-                {% endif %}
-              </tbody>
-            </table>
-          </div>
-        {% endif %}
-        <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0" style="margin-left: 40px">
-          {% if content.title %}
-            <h6 class="title font-weight-bold ml-1 ml-md-4">{{ content.title }}</h6>
+        <div class="col-auto cv-logo-col">
+          {% if content.logo %}
+            <div class="cv-logo-tile">
+              <img
+                class="cv-logo"
+                src="{{ content.logo | prepend: '/assets/img/' | relative_url }}"
+                alt="{{ content.institution | default: content.title }}"
+              />
+            </div>
           {% endif %}
-          {% if content.department or content.institution or content.advisor %}
-            <table class="table-cv ml-1 ml-md-4 institution">
-              <tbody>
-                {% if content.institution %}
-                  <tr>
-                    <td style="vertical-align: top; text-align: center" class="institution">
-                      <i class="fa-solid fa-building-columns iconinstitution"></i>
-                    </td>
-                    <td class="institution">{{ content.institution }}</td>
-                  </tr>
-                {% endif %}
-                {% if content.advisor %}
-                  <tr>
-                    <td style="vertical-align: top; text-align: center" class="advisor">
-                      <i class="fa-solid fa-user-graduate iconinstitution"></i>
-                    </td>
-                    <td class="advisor">{{ content.advisor }}</td>
-                  </tr>
-                {% endif %}
-                {% if content.department %}
-                  <tr>
-                    <td style="vertical-align: top; text-align: center" class="department">
-                      <i class="fa-regular fa-circle-dot icondepartment"></i>
-                    </td>
-                    <td class="department">{{ content.department }}</td>
-                  </tr>
-                {% endif %}
-              </tbody>
-            </table>
-          {% endif %}
-          {% if content.maindescription %}
-            <div class="ml-1 ml-md-4">{{ content.maindescription }}</div>
-          {% endif %}
-          {% if content.description %}
-            <ul class="items">
-              {% for item in content.description %}
-                <li>
-                  {% if item.contents %}
-                    <span class="item-title">{{ item.title }}</span>
-                    <ul class="subitems">
-                      {% for subitem in item.contents %}
-                        <li>
-                          <span class="subitem">{{ subitem }}</span>
-                        </li>
-                      {% endfor %}
-                    </ul>
-                  {% else %}
-                    <span class="item">{{ item }}</span>
+        </div>
+        <div class="col mt-2 mt-md-0 cv-main-col">
+          {% comment %}
+            Two shapes of entry. With `roles`, one institution heads the block and
+            each role keeps its own dates, advisor and bullets — used where the
+            same institution covers several positions. Without it, the entry is a
+            single position and the title leads.
+          {% endcomment %}
+          {% if content.roles %}
+            {% if content.institution %}
+              <div class="cv-institution cv-block-institution">{{ content.institution }}</div>
+            {% endif %}
+            {% if content.location %}
+              <div class="cv-location">{{ content.location }}</div>
+            {% endif %}
+            {% for role in content.roles %}
+              <div class="cv-role">
+                <div class="cv-head">
+                  {% if role.title %}
+                    <h6 class="cv-title font-weight-bold">{{ role.title }}</h6>
                   {% endif %}
-                </li>
-              {% endfor %}
-            </ul>
+                  {% if role.year %}
+                    <span class="cv-date">{{ role.year }}</span>
+                  {% endif %}
+                </div>
+                {% if role.affiliation %}
+                  <div class="cv-affiliation">{{ role.affiliation }}</div>
+                {% endif %}
+                {% if role.advisor %}
+                  <div class="cv-advisor">{{ role.advisor }}</div>
+                {% endif %}
+                {% if role.description %}
+                  {% include cv/items.liquid list=role.description %}
+                {% endif %}
+              </div>
+            {% endfor %}
+          {% else %}
+            <div class="cv-head">
+              {% if content.title %}
+                <h6 class="cv-title font-weight-bold">{{ content.title }}</h6>
+              {% endif %}
+              {% if content.year %}
+                <span class="cv-date">{{ content.year }}</span>
+              {% endif %}
+            </div>
+            {% if content.institution %}
+              <div class="cv-institution">{{ content.institution }}</div>
+            {% endif %}
+            {% if content.location %}
+              <div class="cv-location">{{ content.location }}</div>
+            {% endif %}
+            {% if content.advisor %}
+              <div class="cv-advisor">{{ content.advisor }}</div>
+            {% endif %}
+            {% if content.department %}
+              <div class="cv-department">{{ content.department }}</div>
+            {% endif %}
+            {% if content.maindescription %}
+              <div>{{ content.maindescription }}</div>
+            {% endif %}
+            {% if content.description %}
+              {% include cv/items.liquid list=content.description %}
+            {% endif %}
           {% endif %}
           {% if content.items %}
-            <ul class="items">
-              {% for item in content.items %}
-                <li>
-                  {% if item.contents %}
-                    <span class="item-title">{{ item.title }}</span>
-                    <ul class="subitems">
-                      {% for subitem in item.contents %}
-                        <li>
-                          <span class="subitem">{{ subitem }}</span>
-                        </li>
-                      {% endfor %}
-                    </ul>
-                  {% else %}
-                    <span class="item">{{ item }}</span>
-                  {% endif %}
-                </li>
-              {% endfor %}
-            </ul>
+            {% include cv/items.liquid list=content.items %}
           {% endif %}
           {% if content.linkitems %}
-            <div class="container-links ml-1 ml-md-4">
+            <div class="container-links">
               {% for item in content.linkitems %}
                 {% if item.link %}
                   <div class="container-link-button">

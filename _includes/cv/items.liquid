@@ -1,0 +1,24 @@
+{% comment %}
+  Renders one bullet list for a CV entry. Takes `list`, which is either a list of
+  strings or a list of {title, contents} maps for a titled group of sub-bullets.
+  Factored out so the single-role and multi-role branches of time_table.liquid
+  share one implementation.
+{% endcomment %}
+<ul class="items">
+  {% for item in include.list %}
+    <li>
+      {% if item.contents %}
+        <span class="item-title">{{ item.title }}</span>
+        <ul class="subitems">
+          {% for subitem in item.contents %}
+            <li>
+              <span class="subitem">{{ subitem }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <span class="item">{{ item }}</span>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

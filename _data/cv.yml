@@ -2,57 +2,62 @@
 - title: Education
   type: time_table
   contents:
-    - title: Bachelor of Science, Computer Science
-      institution: McGill University, Montreal, Quebec
-      year: 2023-2026(Expected)
+    - title: Master of Science, Computer Science (AI Option)
+      institution: Mila - Quebec AI Institute & Université de Montréal
+      location: Montreal, QC
+      logo: logo_mila.svg
+      year: 2026 - 2028 (Expected)
       description:
-        - "<strong>Dean's Honour List</strong> (2024-2025)"
+        - "Fully funded research-based Master"
+        - title: "Supervisor:"
+          contents:
+            - "Bang Liu (Université de Montréal)"
+            - "David Adelani (McGill University)"
+    - title: Bachelor of Science, Computer Science
+      institution: McGill University
+      location: Montreal, QC
+      logo: logo_mcgill.svg
+      year: September 2023 - May 2026
+
 - title: Experience
   type: time_table
   contents:
-    - title: Student Researcher
-      institution: McGill University & Mila - Quebec AI Institute, Montreal, QC
-      year: Sept 2025 - Present
-      advisor: "Mentor: Eric Elmoznino"
-      description:
-        - "Working on developing and benchmarking a minimally-modified causal sequence model architectures."
+    - institution: Mila - Quebec AI Institute
+      location: Montreal, QC
+      logo: logo_mila.svg
+      roles:
+        - title: Student Researcher
+          year: Sept 2025 - Present
+          advisor: "Supervisor: Guillaume Lajoie | Mentor: Eric Elmoznino"
+          description:
+            - "Work on augmenting autoregressive models with the ability to evaluate and sample from arbitrary conditionals."
+        - title: Research Intern
+          year: Aug 2025 - Present
+          advisor: "Supervisor: David Adelani"
+          description:
+            - "Working on enhancing translation in low resources language without enough parallel corpus."
+            - "Work on post-training multilingual large language models for low-resource languages."
+        - title: Research Intern
+          year: May 2024 - Present
+          advisor: "Supervisor: Bang Liu | Mentor: Haochen Shi"
+          description:
+            - "Designed and implemented modular LLM-based agent systems for autonomous exploration in open-world environments, investigating self-supervised learning approaches to improve reasoning and planning capabilities."
 
-    - title: Research Intern
-      institution: McGill University & Mila - Quebec AI Institute, Montreal, QC
-      year: Aug 2025 - Present
-      advisor: "Supervisor: David Adelani"
-      description:
-        - "Working on enhancing translation in low resources language without enough parallel corpus."
+    - institution: McGill AI Society Research Incubator
+      location: Montreal, QC
+      logo: logo_mcgill_ai.png
+      roles:
+        - title: Researcher
+          year: March 2025 - July 2025
+          description:
+            - "Explored bias detection in parliamentary discourse by training RoBERTa models from scratch and analyzing embedding space geometry across Inuit and Canadian Parliament datasets."
 
-    - title: Researcher
-      institution: McGill AI Society Research Incubator, Montreal, QC
-      year: March 2025 - July 2025
-      description:
-        - "Explored bias detection in parliamentary discourse by training RoBERTa models from scratch and analyzing embedding space geometry across Inuit and Canadian Parliament datasets."
-
-    - title: Research Intern
-      institution: Université de Montréal & Mila - Quebec AI Institute, Montreal, QC
-      year: May 2024 - Present
-      advisor: "Supervisor: Bang Liu | Mentor: Haochen Shi"
-      description:
-        - "Designed and implemented modular LLM-based agent systems for autonomous exploration in open-world environments, investigating self-supervised learning approaches to improve reasoning and planning capabilities."
-
-    - title: Research Intern
-      institution: National Taiwan University, HCI Lab, Taipei, Taiwan
-      year: Jun 2024 - Aug 2024
-      advisor: "Supervisor: Mike Chen | Mentor: Wei-Chung Su & Shun-Yu Wang"
-      description:
-        - "Contributed to <a href='https://www.roomdreaming.com/zh-TW/'><strong>RoomDreaming</strong></a>, an AI-assisted iterative design system."
-
-- title: Technical Skills
-  type: nested_list
-  contents:
-    - title: Programming Languages
-      items:
-        - Python, C, C++, Java, JavaScript, TypeScript, R, Bash, OCaml, MATLAB
-    - title: ML/AI
-      items:
-        - PyTorch, Transformers, Gym, scikit-learn, NumPy, Pandas, Matplotlib
-    - title: Tools & Technologies
-      items:
-        - Git, Docker, Jupyter, Hugging Face, Weights & Biases, React.js, Unix/Linux, LaTeX, Figma
+    - institution: National Taiwan University, HCI Lab
+      location: Taipei, Taiwan
+      logo: logo_ntu.svg
+      roles:
+        - title: Research Intern
+          year: Jun 2024 - Aug 2024
+          advisor: "Supervisor: Mike Chen | Mentor: Wei-Chung Su & Shun-Yu Wang"
+          description:
+            - "Contributed to <a href='https://www.roomdreaming.com/zh-TW/'><strong>RoomDreaming</strong></a>, an AI-assisted iterative design system."

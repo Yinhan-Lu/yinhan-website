@@ -42,6 +42,16 @@ a.btncv:hover {
  * CV TIME_TABLE styles
  *****************************/
 
+// Section headings ("Education", "Experience", ...). The layout emits these as
+// an h3 at medium weight, which comes out as large as a page title but lighter
+// than the bold entry titles underneath it. Size and weight are set here so the
+// hierarchy runs section heading > entry title > body text.
+div.cv .card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
 /* Fix for date badge overlapping with title */
 span.badge {
   z-index: 1;
@@ -77,12 +87,131 @@ i.icondepartment {
   margin-right: 0.3rem;
 }
 
-table.institution {
-  margin-bottom: 1rem;
+// Entry layout: institution logo in a fixed-width column, entry text beside it,
+// dates as plain text pushed to the far right of the title line.
+//
+// The column pair is col-auto + col rather than col-md-2 + col-md-10: those two
+// percentages already add up to 100%, so the 40px gutter between them pushed the
+// row over its own width and the text column wrapped underneath. col-auto takes
+// exactly the width set here and col absorbs whatever is left, so the two stay
+// side by side no matter how tall the logo makes the left column. The column is
+// rendered even when an entry has no logo, so every entry's text starts at the
+// same left edge.
+.cv-logo-col {
+  width: 116px;
 }
 
-td.department {
+// Every logo sits on the same pale tile at the same size. Institutions publish
+// their marks in fixed colors, so no single artwork stays legible across both
+// themes: the tile gives each one the light ground it was drawn for. In the light
+// theme it is close enough to the card to read as nothing; in the dark theme it
+// is the chip the mark sits on. The uniform footprint is also what keeps the
+// left edge of the entries in a straight line down the page.
+.cv-logo-tile {
+  width: 88px;
+  height: 88px;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: #f2f2f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cv-main-col {
+  min-width: 0; // let long institution names wrap instead of widening the row
+  line-height: 1.55;
+  overflow-wrap: break-word;
+}
+
+img.cv-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.cv-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+h6.cv-title {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.cv-date {
+  flex-shrink: 0;
+  color: var(--global-text-color-light);
+  white-space: nowrap;
+  text-align: right;
+}
+
+.cv-institution {
+  font-style: italic;
+}
+
+// Where one institution heads a block of several roles, its name carries the
+// block rather than sitting under a title, so it takes a touch more weight and
+// the roles below it are separated by their own rhythm.
+.cv-block-institution {
+  font-weight: 600;
+}
+
+.cv-role + .cv-role {
+  margin-top: 1.1rem;
+}
+
+.cv-role {
+  margin-top: 0.9rem;
+}
+
+// The sub-organisation a role sat under, when it differs from the block's
+// institution.
+.cv-affiliation {
+  color: var(--global-text-color-light);
+  font-size: 0.875rem;
+}
+
+.cv-department {
   font-size: 0.8rem;
+}
+
+// The theme ships no rule for these lists, so they sat flush against the
+// location and supervisor lines above them.
+.cv-main-col ul.items {
+  margin-top: 0.6rem;
+  margin-bottom: 0;
+}
+
+// Narrow screens: the logo goes back above the text and the date sits under the
+// title instead of beside it.
+@media (max-width: 576px) {
+  // flex-basis rather than width: the row carries Bootstrap's -15px side
+  // margins, so a child at width:100% comes out 30px wider than the container
+  // and pushes the whole card past the viewport.
+  .cv-logo-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cv-logo-tile {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 0.75rem;
+  }
+
+  .cv-head {
+    display: block;
+  }
+
+  .cv-date {
+    display: block;
+    text-align: left;
+  }
 }
 
 div.container-links {
@@ -231,3 +360,4 @@ ul.timeline li::before {
      color: var(--global-text-color);
 }
 */
+
