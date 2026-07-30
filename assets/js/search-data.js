@@ -16,9 +16,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/research/";
           },
-        },{id: "nav-cv",
-          title: "cv",
-          description: "Yinhan Lu&#39;s Curriculum Vitae",
+        },{id: "nav-yinhan-39-s-cv",
+          title: "Yinhan&#39;s CV",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
