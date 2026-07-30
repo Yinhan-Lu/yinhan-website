@@ -13,10 +13,14 @@
   --global-theme-color: #{$teal-color};
   --global-hover-color: #{$teal-color};
   --global-hover-text-color: #{$white-color};
-  // Institution link colors, independent of the theme color
-  --global-mila-color: #{$purple-color};
-  --global-udem-color: #1a5fb4;
-  --global-mcgill-color: #c8102e;
+  // Institution link colors, independent of the theme color. Hues come from
+  // ColorBrewer Set1 (purple #984EA3, blue #377EB8, red #E41A1C), matching each
+  // institution's representative color. Set1 was designed for fills in figures,
+  // not for text, so lightness is lowered where needed to clear 4.5:1 on white;
+  // the original value is noted where it changed.
+  --global-mila-color: #984ea3;
+  --global-udem-color: #367bb4; // Set1 #377EB8 darkened
+  --global-mcgill-color: #e41a1c;
   --global-footer-bg-color: #{$grey-color-dark};
   --global-footer-text-color: #{$grey-color-light};
   --global-footer-link-color: #{$white-color};
@@ -89,10 +93,11 @@ html[data-theme="dark"] {
   --global-theme-color: #{$cyan-color};
   --global-hover-color: #{$cyan-color};
   --global-hover-text-color: #{$white-color};
-  // Lighter tints so the institution links stay legible on the dark background
-  --global-mila-color: #e07ce8;
-  --global-udem-color: #4a83c4;
-  --global-mcgill-color: #f96a6a;
+  // Same ColorBrewer Set1 hues, lightened instead to clear 4.5:1 on the dark
+  // background
+  --global-mila-color: #ae6ab8; // Set1 #984EA3 lightened
+  --global-udem-color: #3f89c5; // Set1 #377EB8 lightened
+  --global-mcgill-color: #ea494a; // Set1 #E41A1C lightened
   --global-footer-bg-color: #{$grey-color-light};
   --global-footer-text-color: #{$grey-color-dark};
   --global-footer-link-color: #{$black-color};
