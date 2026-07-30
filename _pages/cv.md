@@ -6,8 +6,6 @@ nav: true
 nav_order: 2
 cv_pdf: # 如果你有 PDF 版本的简历，将文件放在 assets/pdf/ 并填写文件名
 description: Yinhan Lu's Curriculum Vitae
-toc:
-  sidebar: left
 ---
 
 ## Education
