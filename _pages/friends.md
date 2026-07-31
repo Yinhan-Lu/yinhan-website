@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /friends/
-title: friends
+title: Friends
 description: My friends and collaborators
 nav: true
 nav_order: 3
